@@ -42,22 +42,38 @@ console.log(getEven([2, 4, 5, 7, 16]));
 
 /////Task 4/////
 
+// let arr = [{name: 'Jhony Walker', birthDate: '1995-12-17'},
+//            {name: 'Andrew', birthDate: '1990-11-03'},
+//            {name: 'Bob', birthDate: '1998-12-17'},
+//            {name: 'Andrew', birthDate: '2001-05-06'}];
+
+// function searchByName(name) {
+//     let search = [];
+//     for(let i = 0; i < arr.length; i++) {
+//         for(let key in arr[i]) {
+//             if(arr[i][key] == name) {
+//                 search.push(arr[i]);
+//             }
+//         }
+//     }
+
+//     return search;
+// }
+
+// console.log(searchByName('Andrew'));
+
+
+///////Task 4 new/////////
+
 let arr = [{name: 'Jhony Walker', birthDate: '1995-12-17'},
            {name: 'Andrew', birthDate: '1990-11-03'},
            {name: 'Bob', birthDate: '1998-12-17'},
            {name: 'Andrew', birthDate: '2001-05-06'}];
 
 function searchByName(name) {
-    let search = [];
-    for(let i = 0; i < arr.length; i++) {
-        for(let key in arr[i]) {
-            if(arr[i][key] == name) {
-                search.push(arr[i]);
-            }
-        }
-    }
-
-    return search;
+    return arr.filter(function(item) {
+        return (item.name == name);
+    });
 }
 
 console.log(searchByName('Andrew'));
